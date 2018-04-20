@@ -5,7 +5,7 @@ export const fetchUser = () => ({
   payload: axios.get('https://reqres.in/api/users/2')
 })
 
-export const changeName = () => ({
-  type: 'CHANGE_NAME',
-  payload: 'jeanette'
+export const changeImg = (dataUrl) => ({
+  type: 'CHANGE_IMG',
+  payload: dataUrl
 })

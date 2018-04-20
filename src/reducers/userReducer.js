@@ -20,6 +20,15 @@ const userReducer = (state=defaultState, action) => {
         one: action.payload.data.data
       }
 
+    case 'CHANGE_IMG':
+      return {
+        ...state,
+        one : {
+          ...state.one,
+          avatar: action.payload
+        }
+      }
+
     default:
       return state;
   }
