@@ -10,8 +10,8 @@ import * as userActions from '../actions/userActions';
 class Users extends Component {
   render () {
     return <div>
-      {this.props.user.one.name} // Acces au state de mon store
-      <button onClick={this.props.userActions.fetchUser}>Change user</button>// Acces aux fonctions/actions de mon store
+      <img src={this.props.user.avatar} />
+      <button onClick={this.props.userActions.fetchUser}>Change user</button>
     </div>
   }
 }
@@ -21,7 +21,7 @@ const [
   mapDispatchToProps
 ] = [
   (state) => ({
-    user: state.user
+    user: state.user.one
   }),
   (dispatch) => ({
     userActions: bindActionCreators(userActions, dispatch)
